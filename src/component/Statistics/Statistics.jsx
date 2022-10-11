@@ -50,7 +50,7 @@ const Statistics = () => {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis className="text-white" dataKey="name" />
         <YAxis />
         <Tooltip />
         <Legend />

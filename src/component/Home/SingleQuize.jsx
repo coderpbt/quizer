@@ -10,12 +10,11 @@ const SingleQuize = ({item}) => {
   }
 
   return (
-    <div className="card card-compact bg-base-100 shadow-xl">
+    <div className="card card-compact shadow-xl">
     <figure><img src={logo} alt="logos" /></figure>
     <div className="card-body">
-      <h2 className="card-title text-left">{name}</h2>
-      <h2 className="card-title">{total} </h2>
-      <i className="fa-regular fa-eye"></i>
+      <h2 className="card-title text-left text-white">{name}</h2>
+      <h2 className="card-title text-white">Total Quize : {total} </h2>
       <div className="card-actions justify-end">
         <button onClick={() => handlerAddToCart(id)} className="btn btn-primary">
           Quize Start
