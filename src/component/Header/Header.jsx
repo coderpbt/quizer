@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -26,14 +26,14 @@ const Header = () => {
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <Link to='/home' className="font-bold uppercase text-white text-xl">DPI quiz contest</Link>
+          <Link to='/' className="font-bold uppercase text-white text-xl">DPI quiz contest</Link>
         </div>
         <div className="navbar-end">
           <ul className="flex items-center">
-            <li><Link to='/home' className='text-white mx-4'>Home</Link></li>
-            <li><Link to='/topics' className='text-white mx-4'>Topics</Link></li>
-            <li><Link to='/statistics' className='text-white mx-4'>Statistics</Link></li>
-            <li><Link to='/blog' className='text-white mx-4'>Blog</Link></li>
+            <li className='text-white mx-4'><NavLink to='/' className={({isActive}) => (isActive ? 'active' : '') }>Home</NavLink></li>
+            <li className='text-white mx-4'><NavLink to='/topics' className='text-white mx-4'>Topics</NavLink></li>
+            <li className='text-white mx-4'><NavLink to='/statistics' className='text-white mx-4'>Statistics</NavLink></li>
+            <li className='text-white mx-4'><NavLink to='/blog' className='text-white mx-4'>Blog</NavLink></li>
            </ul>
         </div>
       </div>
