@@ -15,9 +15,11 @@ const QuizeSingleTemplate = ({quzItem,index}) => {
  
     return (
         <div className='my-4'>
-            <button onClick={correctAnsHandeler}><i className="fa-regular fa-eye"></i></button>
-            <h3>{index + 1}</h3>
-            <h2 className='text-2xl font-bold mb-5'>{quzItem.question}</h2>
+            <div className='flex'>
+                <h3 className='text-white font-bold text-2xl'>{index + 1}.</h3>
+                <h2 className='text-2xl font-bold mb-5 text-white'>{quzItem.question}</h2>
+            </div>
+            <button className='flex justify-end w-full relative top-[-20px]' onClick={correctAnsHandeler}><i className="fa-regular fa-eye text-white text-2xl"></i></button>
             <div className='grid grid-cols-2 gap-3'>
                 {
                     quzItem.options.map((optios, index) => <Options key={index} optios={optios} mcqHandeler={mcqHandeler} />)
