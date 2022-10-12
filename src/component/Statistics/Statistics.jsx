@@ -40,7 +40,6 @@ const Statistics = () => {
   return (
     <div className="lg:w-[1200px] mx-auto w-[90%] py-12">
       <h2 className="text-white text-center py-5 font-bold text-4xl">Quize Chart</h2>
-      <div className="chart">
       <ResponsiveContainer width='100%' aspect={2.0/1.0}>
       <LineChart
         width={1200}
@@ -66,7 +65,6 @@ const Statistics = () => {
         />
       </LineChart>
       </ResponsiveContainer>
-      </div>
     </div>
   );
 };
