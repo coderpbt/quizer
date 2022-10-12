@@ -4,6 +4,7 @@ import QuizeSingleTemplate from "./QuizeSingleTemplate";
 
 const QuizeSingle = () => {
   const loadQuize = useLoaderData();
+
   
   return (
     <div className="lg:w-[700px] mx-auto w-[90%]">
