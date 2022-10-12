@@ -2,12 +2,16 @@ import React from 'react';
 import { toast } from 'react-toastify';
 import Options from './Options';
 
-const QuizeSingleTemplate = ({quzItem,index,subject}) => {
+const QuizeSingleTemplate = ({quzItem,index,mistake,setMistake,correct,setCorrect}) => {
     const mcqHandeler = (optios) => {
         if (quzItem.correctAnswer === optios) {
+            setCorrect(correct + 1)
             return toast.success('Correct Answer', { autoClose: 500 })
+        }else{
+            setMistake(mistake + 1)
+            return toast.error('Wrong Answer', { autoClose: 1000 })
         }
-        return toast.error('Wrong Answer', { autoClose: 1000 })
+        
     }
     const correctAnsHandeler = () => {
         toast.success(`${quzItem.correctAnswer}`, { autoClose: 500 })
